@@ -1,5 +1,12 @@
 package com.hotel.hotel_app.models;
 
-public class HotelChainEmail {
+import jakarta.persistence.*;
 
+@Table(name = "hotelchainemail")
+@IdClass(HotelChainEmailPK.class)
+public class HotelChainEmail {
+    @Id
+    private String name;
+    @Id
+    private String email;
 }

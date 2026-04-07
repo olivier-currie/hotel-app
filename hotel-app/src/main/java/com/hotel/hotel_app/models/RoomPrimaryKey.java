@@ -3,7 +3,7 @@ package com.hotel.hotel_app.models;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class RoomPrimaryKey implements Serializable {
+public class RoomPrimaryKey implements Serializable { 
     private long hotel_id;
 
     private long room_number;
