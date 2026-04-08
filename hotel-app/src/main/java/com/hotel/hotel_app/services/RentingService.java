@@ -1,7 +1,7 @@
 package com.hotel.hotel_app.services;
 
 import com.hotel.hotel_app.models.Renting;
-import com.hotel.hotel_app.repository.RentingRepository;
+import com.hotel.hotel_app.repositories.RentingRepository;
 import org.springframework.stereotype.Service;
 
 @Service
