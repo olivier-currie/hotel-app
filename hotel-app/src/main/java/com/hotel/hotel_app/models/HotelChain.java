@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 @Table(name="hotelchain")
 public class HotelChain {
 
+    @Id
     private String name;
 
     private long num_hotels;
