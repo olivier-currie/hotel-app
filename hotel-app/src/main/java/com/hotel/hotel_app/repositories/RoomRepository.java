@@ -12,8 +12,8 @@ import java.sql.Date;
 @Repository
 public interface RoomRepository extends JpaRepository<Room, RoomPrimaryKey> {
     @Query(value = """
-            SELECT r.* from room r
-            JOIN hotel h ON r.hotel_id
+            SELECT r.* FROM room r
+            JOIN hotel h ON r.hotel_id = h.hotel_id
             JOIN hotelchain hc ON h.chain_name = hc.name
             WHERE h.address LIKE %:location%
             AND hc.name = :chainName
@@ -28,6 +28,7 @@ public interface RoomRepository extends JpaRepository<Room, RoomPrimaryKey> {
             AND b.start_date <= :userEndDate
             AND b.end_date >= :userStartDate
             )
+            AND NOT EXISTS (
             SELECT * FROM renting re 
             WHERE re.hotel_id = r.hotel_id 
             AND re.room_number = r.room_number
