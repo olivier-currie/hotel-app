@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @IdClass(HotelChainPhonePK.class)
 public class HotelChainPhone { 
     @Id
-    private String name;
+    private String chain_name;
     @Id
     private String phone;
 }

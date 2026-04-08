@@ -3,7 +3,7 @@ import java.util.Objects;
 import java.io.Serializable;
 
 public class HotelChainPhonePK implements Serializable { 
-    private String name;
+    private String chain_name;
     private String phone;
 
     @Override
@@ -11,12 +11,12 @@ public class HotelChainPhonePK implements Serializable {
         if (this == o) return true;
         if (!(o instanceof HotelChainPhonePK)) return false;
         HotelChainPhonePK that = (HotelChainPhonePK) o;
-        return Objects.equals(name, that.name) &&
+        return Objects.equals(chain_name, that.chain_name) &&
                Objects.equals(phone, that.phone);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, phone);
+        return Objects.hash(chain_name, phone);
     }
 }

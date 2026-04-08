@@ -9,6 +9,8 @@ public class Hotel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long hotel_ID;
 
+    private String chain_name;
+
     private String name;
 
     private long num_rooms;
@@ -17,8 +19,9 @@ public class Hotel {
 
     private String address;
 
-    public Hotel(Long hotel_ID, String name, long num_rooms, long rating, String address) {
+    public Hotel(Long hotel_ID, String chain_name, String name, long num_rooms, long rating, String address) {
         this.hotel_ID = hotel_ID;
+        this.chain_name = chain_name;
         this.name = name;
         this.num_rooms = num_rooms;
         this.rating = rating;
@@ -26,13 +29,15 @@ public class Hotel {
     }
 
     public Long getHotelID() {return this.hotel_ID;}
-    public String getChainName() {return this.name;}
+    public String getChainName() {return this.chain_name;}
+    public String getName() {return this.name;}
     public long getNumRooms() {return this.num_rooms;}
     public long getRating() {return this.rating;}
     public String getAddress() {return this.address;}
 
     public void setHotelID(Long hotel_ID) {this.hotel_ID = hotel_ID;}
-    public void setChainName(String name) {this.name = name;}
+    public void setChainName(String chain_name) {this.chain_name = chain_name;}
+    public void setName(String name) {this.name = name;}
     public void setNumRooms(long num_rooms) {this.num_rooms = num_rooms;}
     public void setRating(long rating) {this.rating = rating;}
     public void setAddress(String address) {this.address = address;}

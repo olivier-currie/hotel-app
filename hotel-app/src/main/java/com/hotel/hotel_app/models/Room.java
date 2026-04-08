@@ -13,8 +13,6 @@ public class Room {
     @Id
     private long room_number;
 
-    private String name;
-
     private long capacity;
 
     private boolean extendable;
@@ -23,7 +21,7 @@ public class Room {
 
     private double price;
 
-    public Room(Long hotel_id, long room_number, String name, long capacity, boolean extendable, String view_type, double price) {
+    public Room(Long hotel_id, long room_number, long capacity, boolean extendable, String view_type, double price) {
         this.hotel_id = hotel_id;
         this.room_number = room_number;
         this.capacity = capacity;
@@ -34,7 +32,6 @@ public class Room {
 
     public Long getHotelID () {return this.hotel_id;}
     public long getRoomNumber() {return room_number;}
-    public String getChainName() {return this.name;}
     public long getCapacity() {return this.capacity;}
     public boolean isExtendable() {return this.extendable;}
     public String getViewType() {return this.view_type;}
@@ -42,7 +39,6 @@ public class Room {
 
     public void setRoomNumber(long room_number) {this.room_number = room_number;}
     public void setHotelID(Long hotel_id) {this.hotel_id = hotel_id;}
-    public void setChainName(String name) {this.name = name;}
     public void setCapacity(long capacity) {this.capacity = capacity;}
     public void setExtendable(boolean extendable) {this.extendable = extendable;}
     public void setViewType(String view_type) {this.view_type = view_type;}

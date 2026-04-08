@@ -11,20 +11,24 @@ public class Renting {
 
     private Long hotel_ID;
 
-    @Column(name = "ID")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long renting_id;
 
-    private String name;
+    private Long employee_id;
+
+    private String customer_id;
 
     private Date start_date;
 
     private Date end_date;
 
-    public Renting(long room_number, Long hotel_ID, Long renting_id, String name, Date start_date, Date end_date) {
+    public Renting(long room_number, Long hotel_ID, Long renting_id, Long employee_id, String customer_id, Date start_date, Date end_date) {
         this.room_number = room_number;
         this.hotel_ID = hotel_ID;
         this.renting_id = renting_id;
-        this.name = name;
+        this.employee_id = employee_id;
+        this.customer_id = customer_id;
         this.start_date = start_date;
         this.end_date = end_date;
     }
@@ -32,7 +36,8 @@ public class Renting {
     public long getRoomNumber() {return this.room_number;}
     public Long getHotelID() {return this.hotel_ID;}
     public Long getRentingID() {return this.renting_id;}
-    public String getName() {return this.name;}
+    public Long getEmployeeID() {return this.employee_id;}
+    public String getCustomerID() {return this.customer_id;}
     public Date getStartDate() {return this.start_date;}
     public Date getEndDate() {return this.end_date;}
 }
