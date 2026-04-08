@@ -2,7 +2,7 @@ package com.hotel.hotel_app.services;
 
 import com.hotel.hotel_app.models.Room;
 import com.hotel.hotel_app.models.RoomPrimaryKey;
-import com.hotel.hotel_app.repository.RoomRepository;
+import com.hotel.hotel_app.repositories.RoomRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

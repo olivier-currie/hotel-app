@@ -5,7 +5,7 @@ import com.hotel.hotel_app.models.RoomPrimaryKey;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.jpa.query.Param;
+import org.springframework.data.repository.query.Param;
 import java.util.List;
 import java.sql.Date;
 
