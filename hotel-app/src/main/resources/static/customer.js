@@ -21,7 +21,7 @@ async function performSearch() {
     }
 
     try {
-        const response = await fetch(`/rooms/available?userStartDate=${userStartDate}&userEndDate=${userEndDate}&roomCapacity=${roomCapacity}&location=${location}&chainName=${chainName}&hotelRating=${hotelRating}&minRooms=${minRooms}&maxPrice=${maxPrice}`);
+        const response = await fetch(`/api/rooms/available?userStartDate=${userStartDate}&userEndDate=${userEndDate}&roomCapacity=${roomCapacity}&location=${location}&chainName=${chainName}&hotelRating=${hotelRating}&minRooms=${minRooms}&maxPrice=${maxPrice}`);
         const rooms = await response.json();
         renderRooms(rooms);
 
@@ -47,11 +47,13 @@ function renderRooms(rooms) {
         <div class="roomInfo">
             <h4>Room ${room.roomNumber}</h4>
             <p>Price: ${room.price}</p>
-            <button onclick="bookRoom(room.hotelID, room.roomNumber)">Book Room</button>
-        </div>`
+            <button onclick="bookRoom(${room.hotelID}, ${room.roomNumber})">Book Room</button>
+        </div>`;
+
+        container.appendChild(roomDiv);
     })
 }
 
 function bookRoom(hotelID, roomNumber) {
-
+    // I'll work on this soon
 }
