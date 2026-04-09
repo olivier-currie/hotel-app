@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Customer Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <span>Currently on: Customer Portal</span>
+        <a href="index.html">Go Back</a>
+    </nav>
+    <div class="searchForm">
+        <h3>Room Search System</h3>
+        <p>Select your parameters: </p>
+        <form>
+            <label>Start Date</label>
+            <input type="date" id="userStartDate"><br/><br/>
+            <label>End Date</label>
+            <input type="date" id="userEndDate"><br/><br/>
+            <label>Minimum Room Capacity</label>
+            <input type="range" id="roomCapacity" min="1" max="5" oninput="capacityVal.value = this.value">
+            <output id="capacityVal">3</output><br/><br/>
+            <label>Location</label>
+            <input type="text" id="location"><br/><br/>
+            <label>Hotel Chain</label>
+            <input type="text" id="chainName"><br/><br/>
+            <label>Minimum Hotel Rating</label>
+            <select id="hotelRating">
+                <option value="1">1 Star</option>
+                <option value="2">2 Star</option>
+                <option value="3">3 Star</option>
+                <option value="4">4 Star</option>
+                <option value="5">5 Star</option>
+            </select><br/><br/>
+            <label>Minimum Rooms in Hotel</label>
+            <input type="text" id="minRooms"><br/><br/>
+            <label>Maximum Price</label>
+            <input type="text" id="maxPrice"><br/><br/>
+        </form>
+        <button onclick="performSearch()">Search for Available Rooms</button>
+        <main>
+            <h2>Available Rooms</h2>
+            <div id="roomResults" class="roomTable">
+
+            </div>
+        </main>
+    </div>
+    <script src="customer.js"></script>
+</body>
+</html>
