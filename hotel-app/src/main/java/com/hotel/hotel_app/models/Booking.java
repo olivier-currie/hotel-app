@@ -22,10 +22,9 @@ public class Booking {
 
     private Date end_date;
 
-    public Booking(long room_number, Long hotel_ID, Long booking_id, Long employee_id, String customer_id, Date start_date, Date end_date) {
+    public Booking(long room_number, Long hotel_ID, Long employee_id, String customer_id, Date start_date, Date end_date) {
         this.room_number = room_number;
         this.hotel_ID = hotel_ID;
-        this.booking_id = booking_id;
         this.employee_id = employee_id;
         this.customer_id = customer_id;
         this.start_date = start_date;

@@ -1,9 +1,9 @@
 package com.hotel.hotel_app.services;
 
 import com.hotel.hotel_app.models.Room;
-import com.hotel.hotel_app.models.RoomPrimaryKey;
 import com.hotel.hotel_app.repositories.RoomRepository;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.sql.Date;
 
@@ -21,5 +21,13 @@ public class RoomService {
 
     public Room createRoom(Room r) {
         return roomR.save(r);
+    }
+
+     public Room updateRoom(Room room) {
+        return roomR.save(room);
+    }
+
+    public void deleteRoom(Room room) {
+        roomR.delete(room);
     }
 }
