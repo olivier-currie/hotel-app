@@ -16,7 +16,7 @@ public interface RoomRepository extends JpaRepository<Room, RoomPrimaryKey> {
             JOIN hotel h ON r.hotel_id = h.hotel_id
             JOIN hotelchain hc ON h.chain_name = hc.name
             WHERE h.address LIKE %:location%
-            AND hc.name = :chainName
+            AND (hc.name = :chainName OR hc.name = "")
             AND r.capacity >= :roomCapacity
             AND h.rating >= :hotelRating
             AND h.num_rooms >= :minRooms 
