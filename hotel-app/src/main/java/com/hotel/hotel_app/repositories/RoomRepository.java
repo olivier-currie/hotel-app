@@ -40,7 +40,7 @@ public interface RoomRepository extends JpaRepository<Room, RoomPrimaryKey> {
     List<Room> findValidRooms(
             @Param("location") String location,
             @Param("chainName") String chainName,
-            @Param("roomCapacity") long roomCapacity,
+            @Param("roomCapacity") String roomCapacity,
             @Param("hotelRating") long hotelRating,
             @Param("minRooms") long minRooms,
             @Param("maxPrice") double maxPrice,

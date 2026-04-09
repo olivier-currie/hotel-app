@@ -28,7 +28,7 @@ public class RoomController {
     public List<Room> getAvailableRooms(
         @RequestParam String location, 
         @RequestParam String chainName, 
-        @RequestParam long roomCapacity, 
+        @RequestParam String roomCapacity, 
         @RequestParam long hotelRating, 
         @RequestParam long minRooms, 
         @RequestParam double maxPrice, 

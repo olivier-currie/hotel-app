@@ -15,7 +15,7 @@ public class RoomService {
         this.roomR = roomR;
     }
 
-    public List<Room> searchRooms(String location, String chainName, long roomCapacity, long hotelRating, long minRooms, double maxPrice, Date userEndDate, Date userStartDate) {
+    public List<Room> searchRooms(String location, String chainName, String roomCapacity, long hotelRating, long minRooms, double maxPrice, Date userEndDate, Date userStartDate) {
         return roomR.findValidRooms(location, chainName, roomCapacity, hotelRating, minRooms, maxPrice, userEndDate, userStartDate);
     }
 
