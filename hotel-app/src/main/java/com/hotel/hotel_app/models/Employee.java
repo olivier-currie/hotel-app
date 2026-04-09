@@ -17,6 +17,8 @@ public class Employee {
 
     private String address;
 
+    public Employee() {}
+
 
     public Employee(String id_type, Long hotel_id, String name, String address) {
         this.id_type = id_type;

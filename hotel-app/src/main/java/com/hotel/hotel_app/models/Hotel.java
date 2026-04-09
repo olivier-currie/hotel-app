@@ -19,6 +19,8 @@ public class Hotel {
 
     private String address;
 
+    public Hotel() {}
+
     public Hotel(Long hotel_ID, String chain_name, String name, long num_rooms, long rating, String address) {
         this.hotel_ID = hotel_ID;
         this.chain_name = chain_name;

@@ -23,6 +23,8 @@ public class Renting {
 
     private Date end_date;
 
+    public Renting() {}
+
     public Renting(long room_number, Long hotel_ID, Long employee_id, String customer_id, Date start_date, Date end_date) {
         this.room_number = room_number;
         this.hotel_ID = hotel_ID;
@@ -39,4 +41,11 @@ public class Renting {
     public String getCustomerID() {return this.customer_id;}
     public Date getStartDate() {return this.start_date;}
     public Date getEndDate() {return this.end_date;}
+
+    public void setRoomNumber(long room_number) {this.room_number = room_number;}
+    public void setHotelID(Long hotel_ID) {this.hotel_ID = hotel_ID;}
+    public void setEmployeeID(Long employee_id) {this.employee_id = employee_id;}
+    public void setCustomerID(String customer_id) {this.customer_id = customer_id;}
+    public void setStartDate(Date start_date) {this.start_date = start_date;}
+    public void setEndDate(Date end_date) {this.end_date = end_date;}
 }

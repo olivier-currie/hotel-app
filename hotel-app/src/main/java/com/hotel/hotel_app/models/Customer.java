@@ -17,6 +17,8 @@ public class Customer {
 
     private Date reg_date;
 
+    public Customer() {}
+
     public Customer(String customer_id, String id_type, String name, String address, Date reg_date) {
         this.customer_id = customer_id;
         this.id_type = id_type;

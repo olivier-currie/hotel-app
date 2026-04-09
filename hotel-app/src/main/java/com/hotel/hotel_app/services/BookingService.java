@@ -23,7 +23,13 @@ public class BookingService {
 
     public Renting turnBookingIntoRenting(Booking booking) {
 
-        Renting renting = new Renting(booking.getRoomNumber(), booking.getHotelID(), booking.getEmployeeID(), booking.getCustomerID(), booking.getStartDate(), booking.getEndDate());
+        Renting renting = new Renting();
+        renting.setCustomerID(booking.getCustomerID());
+        renting.setEmployeeID(booking.getEmployeeID());
+        renting.setHotelID(booking.getHotelID());
+        renting.setRoomNumber(booking.getRoomNumber());
+        renting.setStartDate(booking.getStartDate());
+        renting.setEndDate(booking.getEndDate());
         bookingR.delete(booking);
         return rentingR.save(renting); 
     }

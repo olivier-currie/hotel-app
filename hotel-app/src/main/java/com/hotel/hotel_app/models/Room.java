@@ -21,6 +21,8 @@ public class Room {
 
     private double price;
 
+    public Room() {}
+
     public Room(Long hotel_id, long room_number, long capacity, boolean extendable, String view_type, double price) {
         this.hotel_id = hotel_id;
         this.room_number = room_number;

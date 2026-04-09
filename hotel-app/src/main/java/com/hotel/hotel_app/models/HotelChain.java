@@ -13,6 +13,8 @@ public class HotelChain {
 
     private String address;
 
+    public HotelChain() {}
+
     public HotelChain(String name, long num_hotels, String address) {
         this.name = name;
         this.num_hotels = num_hotels;
@@ -20,6 +22,10 @@ public class HotelChain {
     }
 
     public String getName() {return this.name;}
-    public Long getNumHotels() {return this.num_hotels;}
+    public long getNumHotels() {return this.num_hotels;}
     public String getAddress() {return this.address;}
+
+    public void setName(String name) {this.name = name;}
+    public void setNumHotels(long num_hotels) {this.num_hotels = num_hotels;}
+    public void setAddress(String address) {this.address = address;}
 }
