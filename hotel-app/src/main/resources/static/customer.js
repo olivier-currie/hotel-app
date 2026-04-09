@@ -37,7 +37,8 @@ function renderRooms(rooms) {
     container.innerHTML = "";
 
     if (rooms.length === 0) {
-        container.innerHTML("<p>No available rooms match your parameters</p>")
+        container.innerHTML = "<p>No available rooms match your parameters</p>";
+        return;
     }
 
     rooms.forEach(room => {
