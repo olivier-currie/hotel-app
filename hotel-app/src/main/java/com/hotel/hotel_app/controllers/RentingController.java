@@ -9,7 +9,7 @@ import com.hotel.hotel_app.models.Renting;
 import com.hotel.hotel_app.services.RentingService;
 
 @RestController
-@RequestMapping("/api/rooms")
+@RequestMapping("/api/rentings")
 public class RentingController {
     private final RentingService rentingService;
 

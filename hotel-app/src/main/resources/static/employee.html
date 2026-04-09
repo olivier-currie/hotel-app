@@ -10,10 +10,79 @@
         <a href="index.html">Go Back</a>
     </nav>
     <div>
-        <h3>asdasd</h3>
-        <p>assdasd</p>
+        <h3>Employee Dashboard</h3>
+        <button onclick="showPage('hotelPage')">View/Create Hotels</button>
+        <button onclick="showPage('checkInPage')">Check-in/Renting</button>
+        <button onclick="showPage('viewPage')">View Database</button>
+    </div>
+    <div id="hotelPage" hidden>
+        <h3>Hotel Management</h3>
         <div>
+            <h4>Create New Hotel</h4>
+            <form>
+                <label>Hotel Chain Name</label>
+                <input type="text" id="chainName"><br/><br/>
+                <label>Hotel Name</label>
+                <input type="text" id="name"><br/><br/>
+                <label>Number of Rooms</label>
+                <input type="text" id="numRooms"><br/><br/>
+                <label>Rating</label>
+                <select id="rating">
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Star</option>
+                    <option value="3">3 Star</option>
+                    <option value="4">4 Star</option>
+                    <option value="5">5 Star</option>
+                </select><br/><br/>
+                <label>Address</label>
+                <input type="text" id="address">
+                <button onclick="createNewHotel()">Create Hotel</button><br/><br/>
+            </form>
+        </div>
+        <hr/>
+        <button>View All Hotels</button>
+        <div id="hotelDisplay"></div>
+    </div>
 
+    <div id="checkInPage" hidden>
+        <h3>Booking and Renting</h3>
+        <div>
+            <h4>Change Booking to Renting</h4>
+            <div id="bookingDisplay"></div>
+        </div>
+        <hr>
+        <div>
+            <h4>Walk-in Renting</h4>
+            <form>
+                <label>Start Date</label>
+                <input type="date" id="userStartDate"><br/><br/>
+                <label>End Date</label>
+                <input type="date" id="userEndDate"><br/><br/>
+                <label>Minimum Room Capacity</label>
+                <input type="text" id="roomNumber"><br/><br/>
+                <label>Location</label>
+                <input type="text" id="hotelID"><br/><br/>
+                <label>Hotel Chain</label>
+                <input type="text" id="customerID"><br/><br/>
+                <button onclick="createNewRenting()">Create Renting</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="viewPage" hidden>
+        <h3>Database Viewer</h3>
+        <div>
+            <h4>Available Rooms per Area</h4>
+            <div id="viewAreaResults">
+
+            </div>
+        </div>
+        <hr/>
+        <div>
+            <h4>Total Capacity per Hotel</h4>
+            <div id="viewCapacityResults">
+
+            </div>
         </div>
     </div>
 </body>
