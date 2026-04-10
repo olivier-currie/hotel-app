@@ -27,7 +27,7 @@ async function performSearch() {
 
     } catch (error) {
         console.error("fail:", error);
-        document.getElementById("roomResults").innerHTML = "<p>we messed up bro it's over</p>";
+        document.getElementById("roomResults").innerHTML = "<p>it's over</p>";
     }
 
 }
@@ -52,9 +52,11 @@ function renderRooms(rooms) {
         </div>`;
 
         container.appendChild(roomDiv);
-    })
+    });
 }
 
 function bookRoom(hotelID, roomNumber) {
-    // I'll work on this soon
+    const userStartDate = document.getElementById("userStartDate").value;
+    const userEndDate = document.getElementById("userEndDate").value;
+
 }

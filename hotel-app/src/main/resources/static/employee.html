@@ -19,7 +19,7 @@
         <h3>Hotel Management</h3>
         <div>
             <h4>Create New Hotel</h4>
-            <form>
+            <form id="hotelForm">
                 <label>Hotel Chain Name</label>
                 <input type="text" id="chainName"><br/><br/>
                 <label>Hotel Name</label>
@@ -40,7 +40,7 @@
             </form>
         </div>
         <hr/>
-        <button>View All Hotels</button>
+        <button onclick="loadHotels()">View All Hotels</button>
         <div id="hotelDisplay"></div>
     </div>
 
@@ -58,11 +58,11 @@
                 <input type="date" id="userStartDate"><br/><br/>
                 <label>End Date</label>
                 <input type="date" id="userEndDate"><br/><br/>
-                <label>Minimum Room Capacity</label>
+                <label>Room Number</label>
                 <input type="text" id="roomNumber"><br/><br/>
-                <label>Location</label>
+                <label>Hotel ID</label>
                 <input type="text" id="hotelID"><br/><br/>
-                <label>Hotel Chain</label>
+                <label>Customer ID</label>
                 <input type="text" id="customerID"><br/><br/>
                 <button onclick="createNewRenting()">Create Renting</button>
             </form>
