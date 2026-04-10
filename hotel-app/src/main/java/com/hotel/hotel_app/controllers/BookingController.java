@@ -20,6 +20,11 @@ public class BookingController {
         this.bookingService = bookingService; 
     }
 
+    @GetMapping("/getall")
+    public List<Booking> getAllBookings() {
+        return bookingService.findAll();
+    }
+
     @PostMapping
     public Booking createBooking(@RequestBody Booking booking) {
         return bookingService.createBooking(booking);
